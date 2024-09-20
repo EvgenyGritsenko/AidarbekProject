@@ -37,8 +37,12 @@ __published:	// IDE-managed Components
 	TImage *Image1;
 	TImage *Image3;
 	TImage *Image2;
+	TMenuItem *N1;
+	TMenuItem *N2;
+	TMenuItem *N15;
 	void __fastcall Image2MouseEnter(TObject *Sender);
 	void __fastcall Image2MouseLeave(TObject *Sender);
+	void __fastcall Image2Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);

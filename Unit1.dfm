@@ -2678,6 +2678,7 @@ object Form1: TForm1
       2D30315430323A35333A32332B30303A30304CC7E87E0000000049454E44AE42
       6082}
     Stretch = True
+    OnClick = Image2Click
   end
   object MainMenu1: TMainMenu
     object ADDMENU: TMenuItem
@@ -2723,6 +2724,15 @@ object Form1: TForm1
       end
       object N14: TMenuItem
         Caption = #1059#1076#1072#1083'. '#1072#1074#1090#1086#1079#1072#1087#1095#1072#1089#1090#1100
+      end
+    end
+    object N1: TMenuItem
+      Caption = #1056#1091#1082#1086#1074#1086#1076#1089#1090#1074#1086
+      object N2: TMenuItem
+        Caption = #1048#1085#1090#1077#1088#1092#1077#1081#1089
+      end
+      object N15: TMenuItem
+        Caption = #1060#1091#1085#1082#1094#1080#1086#1085#1072#1083
       end
     end
   end
