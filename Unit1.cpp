@@ -13,6 +13,13 @@
 #include "AddClient.h"
 #include "EditClient.h"
 #include "DeleteClient.h"
+
+#include "AddSale.h"
+#include "EditSale.h"
+#include "DeleteSale.h"
+#include "AddAutopart.h"
+#include "EditAutopart.h"
+#include "DeleteAutopart.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -79,6 +86,48 @@ void __fastcall TForm1::N8Click(TObject *Sender)
 void __fastcall TForm1::N12Click(TObject *Sender)
 {
 	TForm9 *form = new TForm9(this);
+	form->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N6Click(TObject *Sender)
+{
+	TForm10 *form = new TForm10(this);
+	form->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N7Click(TObject *Sender)
+{
+	TForm13 *form = new TForm13(this);
+	form->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N9Click(TObject *Sender)
+{
+	TForm11 *form = new TForm11(this);
+	form->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N10Click(TObject *Sender)
+{
+	TForm14 *form = new TForm14(this);
+	form->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N13Click(TObject *Sender)
+{
+	TForm12 *form = new TForm12(this);
+	form->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N14Click(TObject *Sender)
+{
+	TForm15 *form = new TForm15(this);
 	form->Show();
 }
 //---------------------------------------------------------------------------

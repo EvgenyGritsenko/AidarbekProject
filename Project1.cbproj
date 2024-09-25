@@ -179,11 +179,23 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="AddAutopart.cpp">
+            <Form>Form13</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>AddAutopart.h</DependentOn>
+            <BuildOrder>14</BuildOrder>
+        </CppCompile>
         <CppCompile Include="AddClient.cpp">
             <Form>Form7</Form>
             <FormType>dfm</FormType>
             <DependentOn>AddClient.h</DependentOn>
             <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="AddSale.cpp">
+            <Form>Form10</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>AddSale.h</DependentOn>
+            <BuildOrder>11</BuildOrder>
         </CppCompile>
         <CppCompile Include="AddWorker.cpp">
             <Form>Form4</Form>
@@ -191,11 +203,23 @@
             <DependentOn>AddWorker.h</DependentOn>
             <BuildOrder>5</BuildOrder>
         </CppCompile>
+        <CppCompile Include="DeleteAutopart.cpp">
+            <Form>Form15</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>DeleteAutopart.h</DependentOn>
+            <BuildOrder>16</BuildOrder>
+        </CppCompile>
         <CppCompile Include="DeleteClient.cpp">
             <Form>Form9</Form>
             <FormType>dfm</FormType>
             <DependentOn>DeleteClient.h</DependentOn>
             <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="DeleteSale.cpp">
+            <Form>Form12</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>DeleteSale.h</DependentOn>
+            <BuildOrder>13</BuildOrder>
         </CppCompile>
         <CppCompile Include="DeleteWorker.cpp">
             <Form>Form6</Form>
@@ -203,11 +227,23 @@
             <DependentOn>DeleteWorker.h</DependentOn>
             <BuildOrder>7</BuildOrder>
         </CppCompile>
+        <CppCompile Include="EditAutopart.cpp">
+            <Form>Form14</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>EditAutopart.h</DependentOn>
+            <BuildOrder>15</BuildOrder>
+        </CppCompile>
         <CppCompile Include="EditClient.cpp">
             <Form>Form8</Form>
             <FormType>dfm</FormType>
             <DependentOn>EditClient.h</DependentOn>
             <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="EditSale.cpp">
+            <Form>Form11</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>EditSale.h</DependentOn>
+            <BuildOrder>12</BuildOrder>
         </CppCompile>
         <CppCompile Include="EditWorker.cpp">
             <Form>Form5</Form>
@@ -249,6 +285,12 @@
         <FormResources Include="DeleteClient.dfm"/>
         <FormResources Include="DeleteWorker.dfm"/>
         <FormResources Include="EditClient.dfm"/>
+        <FormResources Include="AddSale.dfm"/>
+        <FormResources Include="EditSale.dfm"/>
+        <FormResources Include="DeleteSale.dfm"/>
+        <FormResources Include="AddAutopart.dfm"/>
+        <FormResources Include="EditAutopart.dfm"/>
+        <FormResources Include="DeleteAutopart.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

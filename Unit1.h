@@ -41,6 +41,7 @@ __published:	// IDE-managed Components
 	TImage *Image3;
 	TImage *Image2;
 	TADOConnection *ADOConnection1;
+	TImage *Image4;
 	void __fastcall Image2Click(TObject *Sender);
 	void __fastcall Image3Click(TObject *Sender);
 	void __fastcall N4Click(TObject *Sender);
@@ -49,6 +50,12 @@ __published:	// IDE-managed Components
 	void __fastcall N5Click(TObject *Sender);
 	void __fastcall N8Click(TObject *Sender);
 	void __fastcall N12Click(TObject *Sender);
+	void __fastcall N6Click(TObject *Sender);
+	void __fastcall N7Click(TObject *Sender);
+	void __fastcall N9Click(TObject *Sender);
+	void __fastcall N10Click(TObject *Sender);
+	void __fastcall N13Click(TObject *Sender);
+	void __fastcall N14Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);

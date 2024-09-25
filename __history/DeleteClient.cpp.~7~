@@ -1,0 +1,47 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "DeleteClient.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm9 *Form9;
+
+
+void TForm9::LoadClients() {
+    ListBoxWorkers->Clear();
+    ADOQuery->SQL->Text = "SELECT * FROM Работники";
+    ADOQuery->Open();
+    while (!ADOQuery->Eof) {
+		ListBoxWorkers->Items->Add(ADOQuery->FieldByName("ФИО")->AsString);
+        ADOQuery->Next();
+    }
+    ADOQuery->Close();
+}
+
+
+//---------------------------------------------------------------------------
+__fastcall TForm9::TForm9(TComponent* Owner)
+	: TForm(Owner)
+{
+    LoadClients();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm9::ButtonDeleteClick(TObject *Sender) {
+    if (ListBoxWorkers->ItemIndex != -1) {
+		try {
+			ADOQuery->SQL->Text = "DELETE FROM Клиенты WHERE ФИО = :Name";
+			ADOQuery->Parameters->ParamByName("Name")->Value = ListBoxWorkers->Items->Strings[ListBoxWorkers->ItemIndex];
+			ADOQuery->ExecSQL();
+			LoadClients();
+
+			MessageDlg("Запись успешно удалена!", mtInformation, TMsgDlgButtons() << mbOK, 0);
+        }
+		catch (Exception &E) {
+            MessageDlg("Ошибка при удалении записи: " + E.Message, mtError, TMsgDlgButtons() << mbOK, 0);
+        }
+	}
+}

@@ -30,7 +30,7 @@ void TForm5::LoadWorkers() {
 
 //
 
-// Заполнение полей при выборе работника
+
 void __fastcall TForm5::ListBoxWorkersClick(TObject *Sender) {
     if (ListBoxWorkers->ItemIndex != -1) {
         ADOQuery->SQL->Text = "SELECT * FROM Работники WHERE ФИО = :Name";
