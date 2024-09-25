@@ -16,7 +16,7 @@ object Form2: TForm2
     Top = 0
     Width = 1037
     Height = 677
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     Align = alClient
     TabOrder = 0
     object TabSheet1: TTabSheet
@@ -112,7 +112,9 @@ object Form2: TForm2
     Top = 466
   end
   object ADOQuery2: TADOQuery
+    Active = True
     Connection = ADOConnection1
+    CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
       'SELECT * FROM '#1056#1072#1073#1086#1090#1085#1080#1082#1080';')

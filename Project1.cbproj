@@ -88,7 +88,7 @@
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
         <ProjectType>CppVCLApplication</ProjectType>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <AllPackageLibs>rtl.lib;vcl.lib;vclimg.lib;dbrtl.lib;vcldb.lib;vclwinx.lib;bindengine.lib;adortl.lib</AllPackageLibs>
+        <AllPackageLibs>rtl.lib;vcl.lib;vclimg.lib;dbrtl.lib;vcldb.lib;vclwinx.lib;bindengine.lib;adortl.lib;dbexpress.lib;DbxCommonDriver.lib</AllPackageLibs>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
@@ -154,7 +154,7 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <LinkPackageImports>rtl.bpi;vcl.bpi;vclimg.bpi;dbrtl.bpi;vcldb.bpi;vclwinx.bpi;bindengine.bpi;adortl.bpi</LinkPackageImports>
+        <LinkPackageImports>rtl.bpi;vcl.bpi;vclimg.bpi;dbrtl.bpi;vcldb.bpi;vclwinx.bpi;bindengine.bpi;adortl.bpi;dbexpress.bpi;DbxCommonDriver.bpi</LinkPackageImports>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
@@ -179,6 +179,42 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="AddClient.cpp">
+            <Form>Form7</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>AddClient.h</DependentOn>
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="AddWorker.cpp">
+            <Form>Form4</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>AddWorker.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="DeleteClient.cpp">
+            <Form>Form9</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>DeleteClient.h</DependentOn>
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="DeleteWorker.cpp">
+            <Form>Form6</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>DeleteWorker.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="EditClient.cpp">
+            <Form>Form8</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>EditClient.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="EditWorker.cpp">
+            <Form>Form5</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>EditWorker.h</DependentOn>
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Project1.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
@@ -198,8 +234,21 @@
             <DependentOn>Unit2.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
-        <FormResources Include="Unit2.dfm"/>
+        <CppCompile Include="Unit3.cpp">
+            <Form>Form3</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>Unit3.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
         <FormResources Include="Unit1.dfm"/>
+        <FormResources Include="Unit2.dfm"/>
+        <FormResources Include="Unit3.dfm"/>
+        <FormResources Include="EditWorker.dfm"/>
+        <FormResources Include="AddClient.dfm"/>
+        <FormResources Include="AddWorker.dfm"/>
+        <FormResources Include="DeleteClient.dfm"/>
+        <FormResources Include="DeleteWorker.dfm"/>
+        <FormResources Include="EditClient.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

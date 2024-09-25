@@ -11,6 +11,9 @@
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.Imaging.pngimage.hpp>
 #include <Vcl.Imaging.GIFImg.hpp>
+#include <Data.DB.hpp>
+#include <Data.Win.ADODB.hpp>
+#include <Data.SqlExpr.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -37,12 +40,15 @@ __published:	// IDE-managed Components
 	TImage *Image1;
 	TImage *Image3;
 	TImage *Image2;
-	TMenuItem *N1;
-	TMenuItem *N2;
-	TMenuItem *N15;
-	void __fastcall Image2MouseEnter(TObject *Sender);
-	void __fastcall Image2MouseLeave(TObject *Sender);
+	TADOConnection *ADOConnection1;
 	void __fastcall Image2Click(TObject *Sender);
+	void __fastcall Image3Click(TObject *Sender);
+	void __fastcall N4Click(TObject *Sender);
+	void __fastcall N3Click(TObject *Sender);
+	void __fastcall N11Click(TObject *Sender);
+	void __fastcall N5Click(TObject *Sender);
+	void __fastcall N8Click(TObject *Sender);
+	void __fastcall N12Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);

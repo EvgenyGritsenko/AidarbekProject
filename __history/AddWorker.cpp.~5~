@@ -1,0 +1,45 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "AddWorker.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm4 *Form4;
+//---------------------------------------------------------------------------
+__fastcall TForm4::TForm4(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+// Добавление записи
+void __fastcall TForm4::ButtonAddClick(TObject *Sender) {
+    try {
+        // Проверка на пустые поля перед добавлением
+        if (EditName->Text.IsEmpty() || EditPosition->Text.IsEmpty()) {
+            MessageDlg("Пожалуйста, заполните все поля.", mtWarning, TMsgDlgButtons() << mbOK, 0);
+            return;
+        }
+
+        // SQL запрос для добавления данных
+        ADOQuery->SQL->Text = "INSERT INTO Workers (Name, Position) VALUES (:Name, :Position)";
+        ADOQuery->Parameters->ParamByName("Name")->Value = EditName->Text;
+        ADOQuery->Parameters->ParamByName("Position")->Value = EditPosition->Text;
+
+        // Выполнение запроса
+        ADOQuery->ExecSQL();
+
+        // Очищаем поля ввода после успешного добавления
+        EditName->Clear();
+        EditPosition->Clear();
+
+        // Уведомление о том, что запись успешно добавлена
+        MessageDlg("Запись успешно добавлена!", mtInformation, TMsgDlgButtons() << mbOK, 0);
+    }
+    catch (Exception &E) {
+        // Уведомление о неудаче с отображением ошибки
+        MessageDlg("Ошибка при добавлении записи: " + E.Message, mtError, TMsgDlgButtons() << mbOK, 0);
+    }
+}
